@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0a0f1e;
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .container { max-width: 640px; width: 100%; }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(72px, 14vw, 120px);
+      color: #f0f2f8;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    h1 span { color: #20b2aa; font-style: italic; }
+
+    .subtitle {
+      font-size: 13px;
+      color: #5a6880;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 64px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    a.btn {
+      display: block;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: all 0.2s ease;
+    }
+
+    .btn-triage {
+      background: rgba(32,178,170,0.12);
+      color: #20b2aa;
+      border: 1px solid rgba(32,178,170,0.35);
+    }
+
+    .btn-triage:hover {
+      background: rgba(32,178,170,0.24);
+      border-color: #20b2aa;
+    }
+
+    .btn-xray {
+      background: rgba(110,181,255,0.10);
+      color: #6eb5ff;
+      border: 1px solid rgba(110,181,255,0.3);
+    }
+
+    .btn-xray:hover {
+      background: rgba(110,181,255,0.22);
+      border-color: #6eb5ff;
+    }
+
+    .footer {
+      margin-top: 64px;
+      font-size: 11px;
+      color: #252e40;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Medi<span>AI</span></h1>
+    <p class="subtitle">AI Based Healthcare Assistant</p>
+
+    <div class="buttons">
+      <a class="btn btn-triage" href="http://localhost:8501" target="_blank">🏥 Patient Triage &amp; Appointments</a>
+      <a class="btn btn-xray" href="http://localhost:8502" target="_blank">🫁 Chest X-Ray Analyser</a>
+    </div>
+
+    <p class="footer">For educational and demonstration purposes only</p>
+  </div>
+</body>
+</html>
