@@ -1,0 +1,8 @@
+Age,Pain_Level,Fever,Chest_Pain,Breathing_Difficulty,Chronic_Disease,Priority
+65,9,1,1,1,1,1
+25,2,0,0,0,0,4
+70,8,1,0,0,1,2
+40,5,1,0,0,0,3
+,,,,,,
+,,,,,,
+,,,,,,
