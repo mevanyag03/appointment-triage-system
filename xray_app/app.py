@@ -7,13 +7,16 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
+from groq import Groq
+from dotenv import load_dotenv
+import os
 
-# Page config
+load_dotenv()
+
 st.set_page_config(page_title="Chest X-Ray Analyzer", layout="wide")
 st.title("🫁 Chest X-Ray Pneumonia Detector")
 st.markdown("Upload a chest X-ray image to detect pneumonia using AI")
 
-# Load model
 @st.cache_resource
 def load_model():
     model = models.resnet50(weights=None)
@@ -24,7 +27,6 @@ def load_model():
 
 model = load_model()
 
-# Transforms
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.Grayscale(num_output_channels=3),
@@ -32,7 +34,6 @@ transform = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
-# Upload
 uploaded = st.file_uploader("Upload chest X-ray", type=["jpg", "jpeg", "png"])
 
 if uploaded:
@@ -56,3 +57,25 @@ if uploaded:
         st.success(f"✅ {label} — Confidence: {confidence:.2%}")
 
     st.info("⚠️ This tool is for educational purposes only. Not a substitute for clinical diagnosis.")
+
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+    prompt = f"""
+    You are a medical AI assistant. A chest X-ray analysis model predicted: {label} with {confidence:.0%} confidence.
+
+    Write a short 3-4 sentence plain English report for the patient:
+    - What the result means
+    - What they should do next
+    - A reminder this is not a clinical diagnosis
+
+    Keep it simple, calm and clear.
+    """
+
+    with st.spinner("Generating report..."):
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}]
+        )
+
+    st.subheader("📋 AI Report")
+    st.write(response.choices[0].message.content)
