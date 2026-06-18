@@ -1,0 +1,182 @@
+{
+  "dental": {
+    "keywords": ["tooth", "teeth", "gum", "jaw", "mouth", "bite", "dental", "toothache", "molar"],
+    "follow_up_questions": [
+      "How long have you had this pain - hours, days, or weeks?",
+      "Is the pain constant or does it come and go?",
+      "Does it hurt more with hot or cold foods or drinks?",
+      "Is there any swelling in your jaw or face?",
+      "Do you see any visible cavity, crack, or bleeding?"
+    ],
+    "conditions": {
+      "minor_cavity": {
+        "triggers": ["mild", "occasional", "sensitive to cold", "no swelling"],
+        "urgency": "normal",
+        "urgency_label": "Normal",
+        "specialist": "General Dentist",
+        "treatment": "Dental filling",
+        "description": "A small cavity that needs to be cleaned and filled.",
+        "see_doctor_within": "1-2 weeks",
+        "cost_range_lkr": "2000 - 5000",
+        "cost_range_usd": "6 - 15"
+      },
+      "deep_cavity": {
+        "triggers": ["sharp pain", "constant", "weeks", "sensitive to hot"],
+        "urgency": "urgent",
+        "urgency_label": "Urgent",
+        "specialist": "Endodontist (Root Canal Specialist)",
+        "treatment": "Root canal treatment",
+        "description": "The decay has reached the nerve. A root canal removes the infected pulp.",
+        "see_doctor_within": "24-48 hours",
+        "cost_range_lkr": "15000 - 35000",
+        "cost_range_usd": "45 - 105"
+      },
+      "tooth_abscess": {
+        "triggers": ["swelling", "fever", "severe", "pus", "throbbing"],
+        "urgency": "emergency",
+        "urgency_label": "Emergency",
+        "specialist": "Oral and Maxillofacial Surgeon",
+        "treatment": "Emergency drainage plus antibiotics and possible extraction",
+        "description": "An abscess is a dangerous bacterial infection. If untreated it can spread to the jaw or brain.",
+        "see_doctor_within": "TODAY within hours",
+        "cost_range_lkr": "20000 - 60000",
+        "cost_range_usd": "60 - 180"
+      },
+      "tooth_extraction": {
+        "triggers": ["broken", "cracked", "cannot be saved", "wisdom tooth"],
+        "urgency": "urgent",
+        "urgency_label": "Urgent",
+        "specialist": "Oral Surgeon",
+        "treatment": "Tooth extraction",
+        "description": "The tooth is too damaged to be saved and needs removal.",
+        "see_doctor_within": "2-3 days",
+        "cost_range_lkr": "3000 - 10000",
+        "cost_range_usd": "9 - 30"
+      }
+    }
+  },
+  "headache": {
+    "keywords": ["headache", "head pain", "migraine", "head", "skull", "forehead", "temples"],
+    "follow_up_questions": [
+      "Where exactly is the pain - front, back, or one side?",
+      "Is it a throbbing pain or a pressure and tightness feeling?",
+      "Do you have nausea, vomiting, or sensitivity to light?",
+      "Did the headache come on suddenly or gradually?",
+      "Have you had any recent head injury or fever?"
+    ],
+    "conditions": {
+      "tension_headache": {
+        "triggers": ["pressure", "both sides", "stress", "tight", "mild"],
+        "urgency": "normal",
+        "urgency_label": "Normal",
+        "specialist": "General Practitioner (GP)",
+        "treatment": "Rest, hydration, OTC pain reliever such as paracetamol",
+        "description": "Common stress or tension headache - usually resolves with rest.",
+        "see_doctor_within": "Only if it persists more than 3 days",
+        "cost_range_lkr": "200 - 500",
+        "cost_range_usd": "1 - 2"
+      },
+      "migraine": {
+        "triggers": ["throbbing", "one side", "light sensitive", "nausea", "aura"],
+        "urgency": "urgent",
+        "urgency_label": "Urgent",
+        "specialist": "Neurologist",
+        "treatment": "Migraine medication, dark room rest, neurologist referral",
+        "description": "A migraine episode - consult a doctor for proper medication.",
+        "see_doctor_within": "Within 2-3 days",
+        "cost_range_lkr": "2000 - 8000",
+        "cost_range_usd": "6 - 24"
+      },
+      "severe_sudden_headache": {
+        "triggers": ["worst headache", "sudden", "thunderclap", "neck stiff", "confusion"],
+        "urgency": "emergency",
+        "urgency_label": "Emergency",
+        "specialist": "Emergency Medicine / Neurologist",
+        "treatment": "Emergency CT scan and hospital admission",
+        "description": "Sudden severe headache may indicate a brain bleed. This is life-threatening.",
+        "see_doctor_within": "CALL EMERGENCY SERVICES NOW",
+        "cost_range_lkr": "50000 - 200000",
+        "cost_range_usd": "150 - 600"
+      }
+    }
+  },
+  "fever": {
+    "keywords": ["fever", "temperature", "hot", "chills", "sweating", "burning up"],
+    "follow_up_questions": [
+      "What is your temperature reading if you have a thermometer?",
+      "How many days have you had the fever?",
+      "Do you have any other symptoms such as cough, rash, or pain?",
+      "Have you travelled recently or been around sick people?",
+      "Are you able to drink fluids and stay hydrated?"
+    ],
+    "conditions": {
+      "mild_fever": {
+        "triggers": ["low grade", "below 38", "1-2 days", "no other symptoms"],
+        "urgency": "normal",
+        "urgency_label": "Normal",
+        "specialist": "General Practitioner (GP)",
+        "treatment": "Rest, fluids, paracetamol to manage temperature",
+        "description": "Mild fever - likely a minor viral infection. Monitor at home.",
+        "see_doctor_within": "Only if fever persists beyond 3 days",
+        "cost_range_lkr": "200 - 1000",
+        "cost_range_usd": "1 - 3"
+      },
+      "high_fever": {
+        "triggers": ["above 39", "3 days", "chills", "body aches"],
+        "urgency": "urgent",
+        "urgency_label": "Urgent",
+        "specialist": "General Practitioner (GP) / Physician",
+        "treatment": "Doctor visit - may need blood tests or antibiotics",
+        "description": "High or persistent fever needs professional evaluation.",
+        "see_doctor_within": "Within 24 hours",
+        "cost_range_lkr": "3000 - 10000",
+        "cost_range_usd": "9 - 30"
+      },
+      "critical_fever": {
+        "triggers": ["above 40", "seizure", "confused", "rash", "stiff neck", "unconscious"],
+        "urgency": "emergency",
+        "urgency_label": "Emergency",
+        "specialist": "Emergency Medicine Physician",
+        "treatment": "Emergency hospital admission",
+        "description": "Extremely high fever with neurological symptoms may indicate meningitis or sepsis.",
+        "see_doctor_within": "GO TO EMERGENCY NOW",
+        "cost_range_lkr": "30000 - 150000",
+        "cost_range_usd": "90 - 450"
+      }
+    }
+  },
+  "chest": {
+    "keywords": ["chest", "heart", "breathing", "breath", "lung", "ribs", "palpitations"],
+    "follow_up_questions": [
+      "Is the chest pain sharp, pressure-like, or burning?",
+      "Does the pain spread to your arm, neck, or jaw?",
+      "Are you short of breath or feeling dizzy?",
+      "Did it start during exercise or at rest?",
+      "Do you have a history of heart problems?"
+    ],
+    "conditions": {
+      "acid_reflux": {
+        "triggers": ["burning", "after eating", "throat", "mild", "lying down"],
+        "urgency": "normal",
+        "urgency_label": "Normal",
+        "specialist": "General Practitioner (GP) / Gastroenterologist",
+        "treatment": "Antacids, dietary changes, GP consultation",
+        "description": "Likely acid reflux or GERD - manageable with medication and diet.",
+        "see_doctor_within": "Within 1 week",
+        "cost_range_lkr": "1000 - 3000",
+        "cost_range_usd": "3 - 9"
+      },
+      "possible_heart": {
+        "triggers": ["pressure", "squeezing", "arm pain", "jaw", "sweating", "nausea"],
+        "urgency": "emergency",
+        "urgency_label": "Emergency",
+        "specialist": "Cardiologist / Emergency Medicine",
+        "treatment": "CALL EMERGENCY SERVICES - possible heart attack",
+        "description": "These symptoms can indicate a heart attack. Do not drive yourself. Call for help immediately.",
+        "see_doctor_within": "CALL 1990 Sri Lanka or emergency services NOW",
+        "cost_range_lkr": "100000 - 500000",
+        "cost_range_usd": "300 - 1500"
+      }
+    }
+  }
+}
